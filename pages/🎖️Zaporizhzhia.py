@@ -3,16 +3,6 @@ import pandas as pd
 import re
 from streamlit_gsheets import GSheetsConnection
 from st_aggrid import AgGrid, GridOptionsBuilder
-import locale
-
-try:
-    locale.setlocale(locale.LC_ALL, 'uk_UA.UTF-8')
-except:
-    try:
-        locale.setlocale(locale.LC_ALL, 'uk_UA')
-    except:
-        st.warning("Не вдалося встановити українську локаль. Використовується системна локаль.")
-
 
 col1, col2 = st.columns(2)
 
