@@ -5,6 +5,12 @@ from streamlit_gsheets import GSheetsConnection
 from st_aggrid import AgGrid, GridOptionsBuilder
 import locale
 
+st.set_page_config(
+    page_title="Моніторинг цін",
+    page_icon="📈",
+    layout="wide"
+)
+
 try:
     locale.setlocale(locale.LC_ALL, 'uk_UA.UTF-8')
 except:
@@ -13,11 +19,6 @@ except:
     except:
         st.warning("Не вдалося встановити українську локаль. Використовується системна локаль.")
 
-st.set_page_config(
-    page_title="Київ",
-    page_icon="📈",
-    layout="wide"
-)
 
 
 
